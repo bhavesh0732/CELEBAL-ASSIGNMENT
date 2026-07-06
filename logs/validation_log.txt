@@ -1,0 +1,103 @@
+RAG PIPELINE VALIDATION LOG
+======================================================================
+System metrics: {
+  "num_documents": 1,
+  "num_chunks": 5,
+  "chunk_size_words": 200,
+  "chunk_overlap_words": 40,
+  "embedding_model": "tfidf (scikit-learn, local fallback)",
+  "embedding_mode": "tfidf-fallback",
+  "embedding_dimension": 305,
+  "generator_model": "extractive sentence-ranking (local fallback, no LM)",
+  "generator_mode": "extractive-fallback",
+  "vector_store": "FAISS IndexFlatIP",
+  "ingestion_time_sec": 0.0,
+  "chunking_time_sec": 0.0,
+  "embedding_index_time_sec": 0.007,
+  "total_setup_time_sec": 0.007
+}
+======================================================================
+
+Question 1: What are the three broad categories of machine learning?
+Answer: There are three broad categories: supervised learning, unsupervised learning, and reinforcement learning. (Source: sample_notes.txt)
+Retrieval time: 0.001s | Generation time: 0.0s
+Top retrieved chunks:
+  [1] source=sample_notes.txt chunk_index=0 final_score=0.4672 (vector=0.3266, keyword=0.8889)
+      text preview: Machine Learning Fundamentals - Course Notes Chapter 1: Introduction to Machine Learning Machine learning is a branch of artificial intelligence that ...
+  [2] source=sample_notes.txt chunk_index=3 final_score=0.1785 (vector=0.0528, keyword=0.5556)
+      text preview: Chroma, or Pinecone. When a user asks a question, the question itself is embedded and used to search the vector database for the most similar chunks. ...
+  [3] source=sample_notes.txt chunk_index=1 final_score=0.1440 (vector=0.0439, keyword=0.4444)
+      text preview: data recursively based on feature thresholds that best separate the target classes, and random forests combine many decision trees trained on differen...
+  [4] source=sample_notes.txt chunk_index=4 final_score=0.0833 (vector=0.0000, keyword=0.3333)
+      text preview: Chapter 7: Overfitting and Regularization Overfitting occurs when a model learns the noise and specific quirks of the training data rather than the un...
+----------------------------------------------------------------------
+
+Question 2: What does the sigmoid function output in logistic regression?
+Answer: Logistic regression is used for binary classification and outputs a probability between zero and one using the sigmoid function. (Source: sample_notes.txt)
+Retrieval time: 0.001s | Generation time: 0.0s
+Top retrieved chunks:
+  [1] source=sample_notes.txt chunk_index=0 final_score=0.4123 (vector=0.3276, keyword=0.6667)
+      text preview: Machine Learning Fundamentals - Course Notes Chapter 1: Introduction to Machine Learning Machine learning is a branch of artificial intelligence that ...
+  [2] source=sample_notes.txt chunk_index=1 final_score=0.1534 (vector=0.0564, keyword=0.4444)
+      text preview: data recursively based on feature thresholds that best separate the target classes, and random forests combine many decision trees trained on differen...
+  [3] source=sample_notes.txt chunk_index=3 final_score=0.1041 (vector=0.0277, keyword=0.3333)
+      text preview: Chroma, or Pinecone. When a user asks a question, the question itself is embedded and used to search the vector database for the most similar chunks. ...
+  [4] source=sample_notes.txt chunk_index=4 final_score=0.0556 (vector=0.0000, keyword=0.2222)
+      text preview: Chapter 7: Overfitting and Regularization Overfitting occurs when a model learns the noise and specific quirks of the training data rather than the un...
+----------------------------------------------------------------------
+
+Question 3: Why are CNNs effective for image data?
+Answer: Convolutional Neural Networks, or CNNs, are particularly effective for image data because they use shared filters that detect local patterns like edges and textures. (Source: sample_notes.txt)
+Retrieval time: 0.001s | Generation time: 0.0s
+Top retrieved chunks:
+  [1] source=sample_notes.txt chunk_index=1 final_score=0.3732 (vector=0.2119, keyword=0.8571)
+      text preview: data recursively based on feature thresholds that best separate the target classes, and random forests combine many decision trees trained on differen...
+  [2] source=sample_notes.txt chunk_index=4 final_score=0.2272 (vector=0.1601, keyword=0.4286)
+      text preview: Chapter 7: Overfitting and Regularization Overfitting occurs when a model learns the noise and specific quirks of the training data rather than the un...
+  [3] source=sample_notes.txt chunk_index=3 final_score=0.1539 (vector=0.0623, keyword=0.4286)
+      text preview: Chroma, or Pinecone. When a user asks a question, the question itself is embedded and used to search the vector database for the most similar chunks. ...
+  [4] source=sample_notes.txt chunk_index=0 final_score=0.1448 (vector=0.0502, keyword=0.4286)
+      text preview: Machine Learning Fundamentals - Course Notes Chapter 1: Introduction to Machine Learning Machine learning is a branch of artificial intelligence that ...
+----------------------------------------------------------------------
+
+Question 4: What problem does the Transformer's self-attention mechanism solve compared to recurrence?
+Answer: Chapter 4: Natural Language Processing and Transformers The Transformer architecture, introduced in the paper "Attention Is All You Need", replaced recurrence with a self-attention mechanism that lets every token in a sequence directly attend to every other token, which enables much better parallelization during training. (Source: sample_notes.txt)
+Retrieval time: 0.001s | Generation time: 0.0s
+Top retrieved chunks:
+  [1] source=sample_notes.txt chunk_index=2 final_score=0.2953 (vector=0.1886, keyword=0.6154)
+      text preview: "Attention Is All You Need", replaced recurrence with a self-attention mechanism that lets every token in a sequence directly attend to every other to...
+  [2] source=sample_notes.txt chunk_index=1 final_score=0.2745 (vector=0.1865, keyword=0.5385)
+      text preview: data recursively based on feature thresholds that best separate the target classes, and random forests combine many decision trees trained on differen...
+  [3] source=sample_notes.txt chunk_index=3 final_score=0.0577 (vector=0.0000, keyword=0.2308)
+      text preview: Chroma, or Pinecone. When a user asks a question, the question itself is embedded and used to search the vector database for the most similar chunks. ...
+  [4] source=sample_notes.txt chunk_index=4 final_score=0.0385 (vector=0.0000, keyword=0.1538)
+      text preview: Chapter 7: Overfitting and Regularization Overfitting occurs when a model learns the noise and specific quirks of the training data rather than the un...
+----------------------------------------------------------------------
+
+Question 5: What is Retrieval-Augmented Generation and why does it reduce hallucination?
+Answer: Chapter 5: Retrieval-Augmented Generation Retrieval-Augmented Generation, or RAG, combines a retrieval system with a generative language model so that answers are grounded in an external knowledge source instead of relying purely on the model's internal parameters. (Source: sample_notes.txt)
+Retrieval time: 0.001s | Generation time: 0.0s
+Top retrieved chunks:
+  [1] source=sample_notes.txt chunk_index=2 final_score=0.3338 (vector=0.2935, keyword=0.4545)
+      text preview: "Attention Is All You Need", replaced recurrence with a self-attention mechanism that lets every token in a sequence directly attend to every other to...
+  [2] source=sample_notes.txt chunk_index=3 final_score=0.1539 (vector=0.0536, keyword=0.4545)
+      text preview: Chroma, or Pinecone. When a user asks a question, the question itself is embedded and used to search the vector database for the most similar chunks. ...
+  [3] source=sample_notes.txt chunk_index=1 final_score=0.0781 (vector=0.0132, keyword=0.2727)
+      text preview: data recursively based on feature thresholds that best separate the target classes, and random forests combine many decision trees trained on differen...
+  [4] source=sample_notes.txt chunk_index=0 final_score=0.0760 (vector=0.0104, keyword=0.2727)
+      text preview: Machine Learning Fundamentals - Course Notes Chapter 1: Introduction to Machine Learning Machine learning is a branch of artificial intelligence that ...
+----------------------------------------------------------------------
+
+Question 6: What is the capital of France?
+Answer: I could not find this in the provided documents.
+Retrieval time: 0.001s | Generation time: 0.0s
+Top retrieved chunks:
+  [1] source=sample_notes.txt chunk_index=3 final_score=0.1250 (vector=0.0000, keyword=0.5000)
+      text preview: Chroma, or Pinecone. When a user asks a question, the question itself is embedded and used to search the vector database for the most similar chunks. ...
+  [2] source=sample_notes.txt chunk_index=2 final_score=0.1250 (vector=0.0000, keyword=0.5000)
+      text preview: "Attention Is All You Need", replaced recurrence with a self-attention mechanism that lets every token in a sequence directly attend to every other to...
+  [3] source=sample_notes.txt chunk_index=1 final_score=0.1250 (vector=0.0000, keyword=0.5000)
+      text preview: data recursively based on feature thresholds that best separate the target classes, and random forests combine many decision trees trained on differen...
+  [4] source=sample_notes.txt chunk_index=0 final_score=0.1250 (vector=0.0000, keyword=0.5000)
+      text preview: Machine Learning Fundamentals - Course Notes Chapter 1: Introduction to Machine Learning Machine learning is a branch of artificial intelligence that ...
+----------------------------------------------------------------------
